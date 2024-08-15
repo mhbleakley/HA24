@@ -4,16 +4,25 @@
     <head>
         <title>HA24</title>
         <link rel="stylesheet" href="style.css">
+        <!-- <link rel="icon" type="image/x-icon" href="./resources/gear.png"> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <!-- <script src="graph_test.js"></script> -->
     </head>
     <body>
-        <h1 title="lmao">test</h1>
-        <img src="test.png" alt="test image">
-        <hr>
-        <pre>
-            check it out
-            this is on
-            <mark>different</mark>
-                    lines
-        </pre>
+        <div class="menu-bar">
+            <span title="lmao">test</span>
+            <span id="datetime"></span>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item"><canvas id="myChart" style="width:100%;max-width:700px"></canvas></div>
+            <div class="grid-item">1</div>
+            <div class="grid-item">1</div>
+            <div class="grid-item">1</div>
+            <div class="grid-item">1</div>
+            <div class="grid-item">1</div>
+        </div>
+        
     </body>
+
+    <script src="script.js"></script>
 </html>
