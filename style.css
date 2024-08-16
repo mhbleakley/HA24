@@ -1,9 +1,14 @@
+html {
+  height: 100%;
+}
 body {
   background-image: url('./resources/backdrop.jpg');
+  backdrop-filter: blur(5px);
   padding: 5px;
   margin: 0%;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 .menu-bar{
   /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
@@ -15,7 +20,8 @@ body {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: auto auto auto auto; */
+  grid-template-columns: 25% 25% 25% 25%;
   background-color: rgba(175, 175, 175, 0);
   color: rgba(255, 255, 255, 0);
   width: 100%;
@@ -23,9 +29,9 @@ body {
 .grid-item {
   margin: 5px;
   padding: 5px;
-  background-color: rgba(175, 175, 175, 0.467);
+  background-color: rgba(44, 44, 44, 0.75);
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(207, 207, 207, 0.9);
   border-radius: 10px;
   text-align: center;
 }
