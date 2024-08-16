@@ -1,26 +1,37 @@
 body {
-  background-color: darkslategray;
-  padding: 0%;
+  background-image: url('./resources/backdrop.jpg');
+  padding: 5px;
   margin: 0%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .menu-bar{
   padding: 5px;
-  background-color: yellow;
-  color: slategray;
-  font-size: 30px;
-  width: 100%;
+  margin: 5px;
+  font-size: 64px;
+  font-weight: 300;
+}
+.menu-bar > div {
+  display: inline-block;
+
 }
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  background-color: #2196F3;
-  padding: 20px;
+  background-color: rgba(175, 175, 175, 0);
+  color: rgba(255, 255, 255, 0);
   width: 100%;
 }
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  font-size: 30px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(175, 175, 175, 0.467);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
   text-align: center;
+}
+.grid-title {
+  font-size: 30px;
+  text-align: left;
 }

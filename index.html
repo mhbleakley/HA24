@@ -4,25 +4,28 @@
     <head>
         <title>HA24</title>
         <link rel="stylesheet" href="style.css">
-        <!-- <link rel="icon" type="image/x-icon" href="./resources/gear.png"> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-        <!-- <script src="graph_test.js"></script> -->
     </head>
     <body>
         <div class="menu-bar">
-            <span title="lmao">test</span>
-            <span id="datetime"></span>
+            <div style="float: left;">Good day to you fine sir</div>
+            <div style="float: right;" id="datetime"></div>
         </div>
         <div class="grid-container">
-            <div class="grid-item"><canvas id="myChart" style="width:100%;max-width:700px"></canvas></div>
+            <div class="grid-item">
+                <div class="grid-title">Chart Test</div>
+                test
+                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+            </div>
             <div class="grid-item">1</div>
             <div class="grid-item">1</div>
             <div class="grid-item">1</div>
             <div class="grid-item">1</div>
             <div class="grid-item">1</div>
         </div>
-        
     </body>
 
+    <!-- apparently scripts need to run at the end -->
     <script src="script.js"></script>
+    <script src="graph_test.js"></script>
 </html>
