@@ -6,14 +6,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .menu-bar{
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
   padding: 5px;
   margin: 5px;
   font-size: 64px;
   font-weight: 300;
-}
-.menu-bar > div {
-  display: inline-block;
-
+  /* display: inline-table; */
 }
 .grid-container {
   display: grid;
