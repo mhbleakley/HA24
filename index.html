@@ -9,13 +9,13 @@
     <body>
         <div class="menu-bar">
             <div style="float: left;">Good day to you fine sir</div>
-            <div style="float: right;" id="datetime"></div>
+            <div class="grid-item" style="float: right; font-family: 'Courier New', Courier, monospace;" id="datetime"></div>
         </div>
         <div class="grid-container">
             <div class="grid-item">
                 <div class="grid-title">Chart Test</div>
                 test
-                <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                <canvas class="chart" id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
             <div class="grid-item">
                 <div class="grid-title">Weather</div>
@@ -37,6 +37,7 @@
     </body>
 
     <!-- apparently scripts need to run at the end -->
-    <script src="clock.js"></script>
-    <script src="graph_test.js"></script>
+    <script src="./scripts/clock.js"></script>
+    <script src="./scripts/graph_test.js"></script>
+    <script src="./scripts/todoist.js"></script>
 </html>

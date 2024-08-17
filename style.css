@@ -18,6 +18,9 @@ body {
   font-weight: 300;
   /* display: inline-table; */
 }
+.menu-bar-item {
+  background-color: black;
+}
 .grid-container {
   display: grid;
   /* grid-template-columns: auto auto auto auto; */
@@ -38,4 +41,7 @@ body {
 .grid-title {
   font-size: 30px;
   text-align: left;
+}
+.chart {
+  background-color: rgba(255, 255, 255, 0.786);
 }
