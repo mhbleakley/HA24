@@ -1,0 +1,15 @@
+[Unit]
+Description=starts chromium with HA24
+After=multi-user.target
+StartLimitIntervalSec=10
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=hrfo
+ExecStart=/usr/bin/bash /home/hrfo/HA24.sh
+
+[Install]
+WantedBy=multi-user.target
