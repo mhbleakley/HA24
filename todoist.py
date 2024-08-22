@@ -3,9 +3,19 @@ import os
 from time import sleep
 import datetime
 from todoist_api_python.api import TodoistAPI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # APIs ###########################################################################
-td_api = TodoistAPI('f6c161326eb83977a03529120ff85e8f6b3a105a') # get todoist API
+td_api = TodoistAPI(os.environ.get(MB_TODOIST_KEY)) # get todoist API
+
+print('here')
+while True:
+
+	print('lol')
+	sleep(1)
+
 izzy_td_api = TodoistAPI('a4080445392a6ed9007a9dd2f5f9d9db71fc1497')
 
 
