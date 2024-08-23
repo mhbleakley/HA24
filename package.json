@@ -2,7 +2,7 @@
   "name": "ha24",
   "version": "1.0.0",
   "description": "Home Automation 2024",
-  "main": "my_first.js",
+  "main": "index.js",
   "scripts": {
     "test": "console.log('lmao');"
   },
