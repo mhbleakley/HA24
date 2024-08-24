@@ -1,19 +1,8 @@
-// function loadDoc(){
-//     var xhttp = new XMLHttpRequest();
-
-//     xhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200){
-//             document.getElementById('demo').innerHTML = this.responseText();
-//         }
-//     };
-
-//     xhttp.open('GET', 'lmao.txt', true);
-//     xhttp.send();
-// }
-getText("lmao.txt");
+getText("./data/martin_currently_due.txt");
 
 async function getText(file) {
     let myObject = await fetch(file);
     let myText = await myObject.text();
-    document.getElementById("demo").innerHTML = myText;
+
+    document.getElementById("todo").innerHTML = myText;
 }
