@@ -17,12 +17,13 @@ class Todoist:
 			# sleep(1)
 			self.tasks = self.api.get_tasks()
 			print('got tasks')
+			# print(self.tasks)
 			# sleep(1)
 			# self.labels = self.api.get_labels()
 			# print('got labels')
 			# sleep(1)
-			# self.sections = self.api.get_sections()
-			# print('got sections')
+			self.sections = self.api.get_sections()
+			print('got sections')
 			print('todoist update complete')
 		except Exception as e:
 			print(e)
@@ -39,6 +40,12 @@ class Todoist:
 				return project.name
 		return None
 
+	def get_section_by_name(self, s_name):
+		for section in self.sections:
+			if section.name == s_name:
+				return section.id
+		return None
+
 	def get_currently_due(self):
 		tasks = [] # collect tasks that are due 'today' and put their content here
 		today = datetime.today().strftime('%Y-%m-%d')
@@ -51,12 +58,25 @@ class Todoist:
 
 		return tasks
 
+	def get_section_tasks(self, s_name):
+		s_id = self.get_section_by_name(s_name)
+		tasks = []
+		for task in self.tasks:
+			if task.section_id == s_id:
+				tasks.append(task.content)
+
+		sanitized_s_name = s_name.replace(' ', '_')
+
+		self.write_task_list(self.name + '_' + sanitized_s_name + '_section.txt', tasks)
+
+		return tasks
+
 	def write_task_list(self, f_name, tasks):
 		if not os.path.exists('./data/'):
 			os.mkdir('./data')
 
 		html_tasks = self.list_to_html(tasks)
-		
+
 		f = open('./data/' + f_name, 'w')
 		f.writelines(task + '\n' for task in html_tasks)
 		f.close()

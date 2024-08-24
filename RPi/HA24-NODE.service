@@ -9,7 +9,7 @@ Type=simple
 Restart=always
 RestartSec=3
 User=hrfo
-ExecStart=/usr/bin/bash /home/hrfo/HA24.sh
+ExecStart=/usr/bin/node /home/hrfo/HA24/experimental.js
 
 [Install]
 WantedBy=multi-user.target

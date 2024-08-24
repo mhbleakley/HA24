@@ -1,0 +1,15 @@
+[Unit]
+Description=starts chromium with HA24
+After=multi-user.target
+StartLimitIntervalSec=10
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+User=hrfo
+ExecStart=/home/debian/HA24/venv/bin/python /home/hrfo/HA24/update.py
+
+[Install]
+WantedBy=multi-user.target
