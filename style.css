@@ -1,14 +1,19 @@
 html {
   height: 100%;
+  overflow: hidden;
 }
 body {
   background-image: url('./resources/backgrounds/city_rain.jpg');
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   padding: 5px;
   margin: 0%;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .menu-bar{
   padding: 0px;
@@ -38,7 +43,7 @@ body {
   text-align: left;
 }
 .chart {
-  background-color: rgba(255, 255, 255, 0.786);
+  background-color: rgba(255, 255, 255, 0.0);
 }
 .bullet {
   text-align: left;
