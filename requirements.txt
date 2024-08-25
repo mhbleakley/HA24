@@ -1,1 +1,10 @@
-npm install @doist/todoist-api-typescript
+asgiref==3.8.1
+certifi==2024.7.4
+charset-normalizer==3.3.2
+Django==5.1
+idna==3.7
+python-dotenv==1.0.1
+requests==2.32.3
+sqlparse==0.5.1
+todoist_api_python==2.1.7
+urllib3==2.2.2

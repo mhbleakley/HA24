@@ -4,9 +4,8 @@
     <head>
         <title>HA24</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     </head>
-    <body>
+    <body id="main_body">
         <div class="menu-bar">
             <div class="grid-item" style="float: left;">Good day to you fine sir</div>
             <div class="grid-item" style="float: right; font-family: 'Courier New', Courier, monospace;" id="datetime"></div>
@@ -14,11 +13,11 @@
         <div class="grid-container">
             <div class="grid-item">
                 <div class="grid-title">Chart Test</div>
-                test
                 <canvas class="chart" id="myChart" style="width:100%;max-width:700px"></canvas>
             </div>
             <div class="grid-item">
                 <div class="grid-title">Weather</div>
+                <canvas class="chart" id="weather" style="width:100%;max-width:700px"></canvas>
             </div>
             <div class="grid-item">
                 <div class="grid-title">Grocery List</div>
@@ -43,8 +42,14 @@
     </body>
 
     <!-- apparently scripts need to run at the end -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <script src="./scripts/clock.js"></script>
     <script src="./scripts/graph_test.js"></script>
-    <script src="./scripts/test.js"></script>
+    <script src="./scripts/todoist.js"></script>
+    <script src="./scripts/background.js"></script>
+
+    <!-- <script src="jquery-csv.js"></script> -->
+    <script src="./scripts/weather.js"></script>
 </html>

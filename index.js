@@ -1,14 +1,43 @@
-const { createServer } = require('node:http');
+var http = require('http');
+var fs = require('fs');
+var path = require('path');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+port = 8080;
+hostname = '127.0.0.1';
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+const server = http.createServer(function (req, res) {
+    var filePath = req.url;
+    if (filePath == '/') filePath = '/index.html';
+
+    filePath = __dirname+filePath;
+    var extname = path.extname(filePath);
+    var contentType = 'text/html';
+
+    switch (extname) {
+        case '.js':
+        contentType = 'text/javascript';
+        break;
+        case '.css':
+        contentType = 'text/css';
+        break;
+    }
+
+    fs.exists(filePath, function(exists) {
+        if (exists) {
+            fs.readFile(filePath, function(error, content) {
+                if (error) {
+                    res.writeHead(500);
+                    res.end();
+                }
+                else {                   
+                    res.writeHead(200, { 'Content-Type': contentType });
+                    res.end(content, 'utf-8');                  
+                }
+            });
+        }
+    });
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`);
 });

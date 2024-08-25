@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body {
-  background-image: url('./resources/backdrop.jpg');
+  background-image: url('./resources/backgrounds/city_rain.jpg');
   backdrop-filter: blur(5px);
   padding: 5px;
   margin: 0%;
