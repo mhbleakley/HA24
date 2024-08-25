@@ -14,16 +14,6 @@ mgr = OWmanager(options,
     daily.all())
 
 # Download data
-meteo = mgr.get_data(3, 1, './data/weather')
-
-# f = open('weather.json', 'r')
-# data = json.load(f)
-
-# units = []
-# for i in data['hourly_units']:
-#     units.append(i)
-
-# print(units)
-
-# for i, time in enumerate(data['hourly']['time']):
+def get_weather():
+    meteo = mgr.get_data(3, 1, './data/weather')
     
