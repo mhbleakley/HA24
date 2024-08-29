@@ -6,6 +6,9 @@ app.use(express.static('./public'))
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, './index.html'))
+    console.log('client connected')
+    console.log(`client IP: ${req.socket.remoteAddress}`);
+    console.log(`client port: ${req.socket.remotePort}`);
 })
 
 app.all('*', (req, res) => {

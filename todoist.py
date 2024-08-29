@@ -4,27 +4,27 @@ from datetime import datetime, timedelta
 from todoist_api_python.api import TodoistAPI
 
 class Todoist:
-	def __init__(self, key, name):
+	def __init__(self, key, name, destination_folder):
 		self.api = TodoistAPI(key)
 		self.name = name
+		self.destination_folder = destination_folder
 		self.update()
 	
 	def update(self):
 		try:
-			print('updating from todoist')
-			# self.projects = self.api.get_projects()
-			# print('got projects')
-			# sleep(1)
+			print(f'updating from {self.name}\'s todoist')
+			self.projects = self.api.get_projects()
+			print('got projects...', end=' ')
+			sleep(1)
 			self.tasks = self.api.get_tasks()
-			print('got tasks')
-			# print(self.tasks)
-			# sleep(1)
-			# self.labels = self.api.get_labels()
-			# print('got labels')
-			# sleep(1)
+			print('got tasks...', end=' ')
+			sleep(1)
+			self.labels = self.api.get_labels()
+			print('got labels...', end=' ')
+			sleep(1)
 			self.sections = self.api.get_sections()
-			print('got sections')
-			print('todoist update complete')
+			print('got sections...')
+			print(f'completed {self.name}\'s todoist update.\n')
 		except Exception as e:
 			print(e)
 
@@ -72,14 +72,15 @@ class Todoist:
 		return tasks
 
 	def write_task_list(self, f_name, tasks):
-		if not os.path.exists('./data/'):
-			os.mkdir('./data')
+		tl_dest = self.destination_folder + '/data/'
+		if not os.path.exists(tl_dest):
+			os.mkdir(tl_dest)
 
 		html_tasks = self.list_to_html(tasks)
 
-		f = open('./data/' + f_name, 'w')
-		f.writelines(task + '\n' for task in html_tasks)
-		f.close()
+		with open(tl_dest + f_name, 'w') as f:
+			f.writelines(task + '\n' for task in html_tasks)
+			f.close()
 
 	def list_to_html(self, lst):
 		new = ['<ul class=\'bullet_list\'>']
