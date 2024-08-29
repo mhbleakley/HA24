@@ -21,9 +21,13 @@ weather_timer.start()
 
 while True:
     if td_timer.is_expired():
+        print('timer expired')
+        sleep(2)
         mb_td.update()
         mb_td.get_currently_due()
 
         in_td.update()
         in_td.get_section_tasks('GROCERY LIST')
         in_td.get_currently_due()
+
+        td_timer.start()
