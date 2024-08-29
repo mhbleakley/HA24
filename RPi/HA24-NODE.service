@@ -9,7 +9,7 @@ Type=simple
 Restart=always
 RestartSec=3
 User=hrfo
-ExecStart=/usr/bin/node /home/hrfo/HA24/index.js
+ExecStart=/usr/bin/npx nodemon /home/hrfo/HA24/app.js
 
 [Install]
 WantedBy=multi-user.target
