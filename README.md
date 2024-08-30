@@ -1,3 +1,1 @@
-<p align="center">
-  ![](./public/resources/franklin.gif)
-</p>
+![](./public/resources/franklin.gif)
