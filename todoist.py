@@ -54,8 +54,11 @@ class Todoist:
 				if task.due.date <= today:
 					tasks.append(task.content)
 
+		print('writing due to data')
+
 		self.write_task_list(self.name + '_currently_due.txt', tasks)
 
+		print('done')
 		return tasks
 
 	def get_section_tasks(self, s_name):
