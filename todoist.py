@@ -54,11 +54,11 @@ class Todoist:
 				if task.due.date <= today:
 					tasks.append(task.content)
 
-		print('writing due to data')
+		# print('writing due to data')
 
 		self.write_task_list(self.name + '_currently_due.txt', tasks)
 
-		print('done')
+		# print('done')
 		return tasks
 
 	def get_section_tasks(self, s_name):
@@ -78,9 +78,9 @@ class Todoist:
 		tl_dest = self.destination_folder + '/data/'
 		if not os.path.exists(tl_dest):
 			os.mkdir(tl_dest)
-			print(f'making directory {tl_dest}')
-		else:
-			print(f'directory {tl_dest} already exists')
+			# print(f'making directory {tl_dest}')
+		# else:
+		# 	print(f'directory {tl_dest} already exists')
 
 		html_tasks = self.list_to_html(tasks)
 
