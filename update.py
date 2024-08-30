@@ -20,7 +20,7 @@ def todoist_update():
 
     in_td.update()
     in_td.get_currently_due()
-    in_td.get_section_by_name('GROCERY LIST')
+    in_td.get_section_tasks('GROCERY LIST')
 
 td_timer = threading.Timer(60, todoist_update)
 td_timer.start()
