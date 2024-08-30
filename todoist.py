@@ -75,6 +75,9 @@ class Todoist:
 		tl_dest = self.destination_folder + '/data/'
 		if not os.path.exists(tl_dest):
 			os.mkdir(tl_dest)
+			print(f'making directory {tl_dest}')
+		else:
+			print(f'directory {tl_dest} already exists')
 
 		html_tasks = self.list_to_html(tasks)
 
