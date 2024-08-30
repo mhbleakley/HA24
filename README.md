@@ -1,1 +1,1 @@
-![](https://github.com/mhbleakley/HA24/public/resources/franklin.gif)
+![](./public/resources/franklin.gif)
