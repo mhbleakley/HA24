@@ -4,4 +4,5 @@ node_modules
 /__pycache__
 data
 .DS_store
-openmeteopy
+/backend/__pycache__
+/backend/.cache

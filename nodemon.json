@@ -1,4 +1,4 @@
 {
     "verbose": true,
-    "ignore": ["./__pycache__", "./RPi", "./venv", "./env"]
+    "ignore": ["./__pycache__", "./RPi", "./venv", "./env", "./backend"]
 }

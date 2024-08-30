@@ -3,8 +3,8 @@ html {
   overflow: hidden;
 }
 body {
-  background-image: url('./resources/backgrounds/city_rain.jpg');
-  backdrop-filter: blur(3px);
+  background-image: url('./resources/backgrounds/background.jpg');
+  /* backdrop-filter: blur(3px); */
   padding: 5px;
   margin: 0%;
   color: white;
