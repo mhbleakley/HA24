@@ -74,6 +74,7 @@ class Todoist:
 	def write_task_list(self, f_name, tasks):
 		tl_dest = self.destination_folder + '/data/'
 		if not os.path.exists(tl_dest):
+			print(os.getcwd())
 			os.mkdir(tl_dest)
 
 		html_tasks = self.list_to_html(tasks)
