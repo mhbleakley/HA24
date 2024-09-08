@@ -9,6 +9,7 @@ Type=simple
 Restart=always
 RestartSec=3
 User=hrfo
+WorkingDirectory=/home/hrfo/HA24
 ExecStart=/home/hrfo/HA24/venv/bin/python /home/hrfo/HA24/update.py
 
 [Install]
