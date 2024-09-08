@@ -6,3 +6,4 @@ data
 .DS_store
 /backend/__pycache__
 /backend/.cache
+.cache

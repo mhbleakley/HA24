@@ -6,12 +6,15 @@ import os
 
 class Spotify:
     def __init__(self, name, destination_folder, client_id, client_secret):
-        self.name = name
+        self.name = name 
+
         self.client_id = client_id
         self.client_secret = client_secret
+        self.client_redirect_uri = client_redirect_uri
+
         self.auth_manager = SpotifyClientCredentials()
-        self.scope = ['ugc-image-upload', 'user-read-playback-state', 'user-read-currently-playing']
-        self.sp = spotipy.Spotify(auth_manager=SpotifyOAuth(scope=self.scope))
+        self.scope = ['user-read-playback-state', 'user-read-currently-playing'] # 'ugc-image-upload', 
+        self.sp = spotipy.Spotify(auth_manager=self.auth_manager)
         self.destination_folder = destination_folder
 
     def get_playback(self):
@@ -62,3 +65,10 @@ class Spotify:
         <progress value="{progress_ms}" max="{duration_ms}"></progress>\n\
         </div>'
         return html
+
+
+mb_spotify_id = os.environ.get('MB_SPOTIPY_CLIENT_ID')
+mb_spotify_secret = os.environ.get('MB_SPOTIPY_CLIENT_SECRET')
+mb_spotify_redirect_uri = os.environ.get('MB_SPOTIPY_REDIRECT_URI')
+mb_spotify = Spotify('martin', './public', mb_spotify_id, mb_spotify_secret)
+
