@@ -6,6 +6,9 @@ sudo cp /home/hrfo/HA24/RPi/HA24-API.service /etc/systemd/system/
 sudo cp /home/hrfo/HA24/RPi/HA24-BROWSER.service /etc/systemd/system/
 sudo cp /home/hrfo/HA24/RPi/HA24-NODE.service /etc/systemd/system/
 
+# restarting service
+sudo systemctl daemon-reload
+
 # move chromium script #####################################
 echo 'copying chromium script to ~'
 sudo cp /home/hrfo/HA24/RPi/HA24-start-chromium.sh /home/hrfo/
