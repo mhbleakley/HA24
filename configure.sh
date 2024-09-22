@@ -6,7 +6,7 @@ sudo cp /home/hrfo/HA24/RPi/HA24-API.service /etc/systemd/system/
 sudo cp /home/hrfo/HA24/RPi/HA24-BROWSER.service /etc/systemd/system/
 sudo cp /home/hrfo/HA24/RPi/HA24-NODE.service /etc/systemd/system/
 
-# restarting service
+# reload systemd
 sudo systemctl daemon-reload
 
 # move chromium script #####################################
