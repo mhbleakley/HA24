@@ -2,30 +2,29 @@ html {
   height: 100%;
   overflow: hidden;
 }
+@font-face {
+  font-family: Futura;
+  src: url(./resources/fonts/futura/Futura_Book_font.ttf);
+}
 body {
-  background-image: url('./resources/backgrounds/mac_lmao_0.jpg');
-  padding: 5px;
+  padding: 0%;
   margin: 0%;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Futura;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
-.menu-bar{
-  padding: 0px;
-  margin: 0px;
-  font-size: 52px;
-  font-weight: 300;
+.background_img {
+  height: 110%;
+  position: absolute;
+  background-position: center;
 }
 .grid-container {
   display: grid;
-  /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: 25% 25% 25% 25%;
-  background-color: rgba(175, 175, 175, 0);
-  color: rgba(255, 255, 255, 0);
   width: 100%;
 }
 .grid-item {
@@ -40,11 +39,8 @@ body {
   font-size: 24px;
 }
 .grid-title {
-  font-size: 40px;
+  font-size: 48px;
   text-align: left;
-}
-.chart {
-  background-color: rgba(255, 255, 255, 0.0);
 }
 .bullet {
   text-align: left;
