@@ -12,20 +12,23 @@ body {
   color: white;
   font-family: Futura;
   height: 100%;
-  background-position: center;
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   overflow: hidden;
 }
 .background_img {
-  height: 110%;
+  height: 100%;
+  width: 100%;
   position: absolute;
   background-position: center;
+  object-fit: cover;
 }
 .grid-container {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0);
 }
 .grid-item {
   margin: 10px;
