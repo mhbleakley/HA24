@@ -7,6 +7,17 @@ import sys
 
 load_dotenv()
 
+from backend.background_loader import *
+
+def background_update():
+    bgs = shuffle_bgs('./public/resources/backgrounds')
+    generate_background_html(bgs, './public/resources/backgrounds', './public/data')
+
+background_update()
+
+bg_timer = threading.Timer(18000, background_update)
+bg_timer.start()
+
 from backend.todoist import Todoist
 
 mb_td_key = os.environ.get('MB_TODOIST_KEY')
@@ -23,19 +34,10 @@ def todoist_update():
     in_td.get_currently_due()
     in_td.get_section_tasks('GROCERY LIST')
 
+todoist_update()
+
 td_timer = threading.Timer(60, todoist_update)
 td_timer.start()
-
-# from backend.background_change import BackgroundManager
-
-# backgrounds_dir = './public/resources/backgrounds/'
-# bgm = BackgroundManager(backgrounds_dir)
-
-# def change_background():
-#     bgm.rotate()
-
-# bgm_timer = threading.Timer(3600, change_background)
-# bgm_timer.start()
 
 # from backend.spotify import Spotify
 
@@ -56,6 +58,10 @@ while True:
         if not td_timer.is_alive():
             td_timer = threading.Timer(td_timer.interval, td_timer.function)
             td_timer.start()
+
+        if not bg_timer.is_alive():
+            bg_timer = threading.Timer(bg_timer.interval, bg_timer.function)
+            bg_timer.start()
 
         # if not bgm_timer.is_alive():
         #     bgm_timer = threading.Timer(bgm_timer.interval, bgm_timer.function)
