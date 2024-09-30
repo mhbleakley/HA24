@@ -9,6 +9,6 @@ async function getStuff() {
     getText("./data/backgrounds.txt", 'background_holder');
 }
 
-getStuff();
+// getStuff();
 
-// setInterval(getStuff, 1000);
+setInterval(getStuff,  1800000);
