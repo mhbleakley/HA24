@@ -15,7 +15,7 @@ def background_update():
 
 background_update()
 
-bg_timer = threading.Timer(18000, background_update)
+bg_timer = threading.Timer(60, background_update)
 bg_timer.start()
 
 from backend.todoist import Todoist

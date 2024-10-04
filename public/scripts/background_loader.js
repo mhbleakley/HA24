@@ -11,4 +11,4 @@ async function getStuff() {
 
 getStuff();
 
-// setInterval(getStuff,  1800000);
+setInterval(getStuff,  30000);
